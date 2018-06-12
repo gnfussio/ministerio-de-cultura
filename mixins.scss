@@ -1,0 +1,35 @@
+
+$blanco : #FFF;
+$negro : #000;
+
+
+@mixin transicion($val){
+	-webkit-transition: $val;
+	-moz-transition: $val;
+	-o-transition: $val;
+	transition: $val;
+}
+
+// requiere compass/css3
+@mixin flexo{
+	@include display-flex(flex);
+	@include align-items(flex-end);
+	@include justify-content(center);
+}
+
+@mixin flexo2{
+	@include display-flex(flex);
+	@include align-items(start);
+	@include justify-content(center);
+}
+
+@mixin flexo3{
+	@include display-flex(flex);
+	@include align-items(center);
+	@include justify-content(center);
+}
+
+@mixin wyh {
+	width: 100%;
+	height: auto;
+}
