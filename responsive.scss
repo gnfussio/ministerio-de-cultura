@@ -3,23 +3,340 @@
 
 
 @media only screen and (min-width: 1440px) {
-
+  .page-musica{
+    h1.page-title{
+      margin-left: 6%;
+    }
+  }
 }
 @media only screen and (max-width: 1440px) { // Laptop L
+  section.slider .wrapComands .items:hover .textoOculto {
+    p{
+      font-size: 0.9em!important;
+    }
+  }
+}
+@media only screen and (max-width: 1200px) {
 
+  .front{
+    .wrapCalendario{
+      top:0!important;
+      left: 6%!important;
+      .wrapdiasmes ul li{
+            padding: 3px 3px 3px 17px!important;
+      }
+    }
+  }
+
+  .wrapComands{
+    position: inherit!important;
+    width: 100%!important;
+    padding: 0!important;
+    @include display-flex(flex!important);
+    @include flex-wrap(wrap);
+    .items{
+      display: inline-block!important;
+      background: $rojo!important;
+      width: 25%!important;
+      margin: 0!important;
+      text-align: center!important;
+      .text{
+        color: $blanco!important;
+      }
+    }
+  }
 }
 @media only screen and (max-width: 1024px) { // Laptop
 
 }
 @media only screen and (max-width: 992px) {
-
+  .view-proximas-actividades{
+    .view-content{
+      .views-slideshow-cycle-processed{
+        .views_slideshow_cycle_main{
+          .views-slideshow-cycle-main-frame{
+            .views_slideshow_slide{
+              .views-slideshow-cycle-main-frame-row-item{
+                width: 45%!important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .wrapMenuColores{
+    display: none!important;
+  }
+  .wrapHeader{
+    .wrapMostrarMenu{
+      .mostrarMenu{
+        display: block!important;
+      }
+    }
+  }
 }
+
 @media only screen and (max-width: 768px) {
 
-}
-@media only screen and (max-width: 480px){
+  .front{
+    .wrapCalendario{
+      position: inherit!important;
+      max-width: 100%!important;
+      width:100%!important;
+      .wrapdiasmes ul li{
+            padding: 3px 3px 3px 17px!important;
+      }
+      h2{
+        color: $grisTxt!important;
+      }
+    }
+  }
 
+  .provincias{
+    ul{
+      li{
+        width:100%!important;
+        border-bottom: solid 1px $grisClaro;
+        padding: 12px 0;
+      }
+    }
+  }
+
+  #block-block-11{
+    position: inherit!important;
+    text-align: center!important;
+    right: 0!important;
+    bottom: 0!important;
+    margin-top: 14px;
+    figure{
+      display: inline-block!important;
+    }
+  }
+  .wrapMostrarMenu{
+    width: 100%;
+  }
+  .mobilLogo{
+    display: block!important;
+    a{
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    img{
+      width: 160px;
+      height: auto;
+      margin-bottom: -15px;
+    }
+  }
+  #block-block-8{
+    display: none!important;
+  }
+  .wrapComands{
+    .items{
+      width: 50%!important;
+      border: solid 1px $blanco;
+      &:before{
+        border: none!important;
+      }
+      .text{
+        font-size: 0.8em!important;
+      }
+      .textoOculto{
+        font-size: 0.7em!important;
+        padding: 0 12px;
+      }
+    }
+  }
+  .wrapEncuentrenos{
+    margin-top: 30px auto 0 auto!important;
+    border-right: none!important;
+    padding: 20px 0 0px 0!important;
+    width: 100%!important;
+    text-align: center!important;
+  }
+  .tofull{
+    .region{
+      padding: 0 14px 20px 14px!important;
+      display: block!important;
+      #block-block-1{
+        width: 100%!important;
+      }
+      #block-search-form{
+        margin: 20px auto 0 auto!important;
+      }
+    }
+  }
+
+  //slider actividades
+
+  .view-proximas-actividades{
+    .view-content{
+      .views-slideshow-cycle-processed{
+        .views_slideshow_cycle_main{
+          .views-slideshow-cycle-main-frame{
+            .views_slideshow_slide{
+              .views-slideshow-cycle-main-frame-row-item{
+                width: 45%!important;
+                .views-field-field-nombre-actividad{
+                  width: 75%!important;
+                  margin-left: 22%!important;
+                  p{
+
+                  }
+                }
+                .views-field-field-fecha{
+                  width: 75%!important;
+                  margin-left: 22%!important;
+                  p{
+
+                  }
+                }
+                .views-field-field-imagen{
+                  float: left;
+                  width: 20%!important;
+                  img{
+                    width: 100%!important;
+                    height: auto!important;
+                    margin-top: 20px;
+                  }
+                }
+                /// hover ROW slider
+                &:hover{
+
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  ////////////////////////
+  //**************** Footer
+
+  #block-block-5{
+    padding: 20px 0;
+    font-family: $tipo;
+    section.footer{
+      font-family: $tipo;
+      .wrapIconsFooter{
+        max-width: 90%!important;
+        margin: 0 auto;
+        @include flex-wrap(wrap);
+        .item{
+          width: 90%!important;
+          margin-bottom: 20px!important;
+          @include flexo3;
+          @include justify-content(start!important);
+          figure{
+            padding-left: 20px!important;
+            img{
+              width: 40px!important;
+              height: auto!important;
+            }
+          }
+          h2{
+            padding: 14px 0 14px 20px!important;
+          }
+        }
+      }
+      .wrapFooterBottom{
+        p.textFooter{
+          text-align: center!important;
+        }
+        .wrapRedesSociales{
+          float: inherit!important;
+          margin: 20px 0!important;
+          text-align: center!important;
+        }
+      }
+    }
+  }
+  .view-eventos-navidad{
+    .views-row{
+      width: 45%!important;
+    }
+  }
+  #block-block-5{
+    section.footer{
+        .item{
+          h2{
+            font-size: 1.1em!important;
+          }
+        }
+      }
+    }
+    #main-content{
+      background-image: none!important;
+    }
 }
+
+@media only screen and (max-width: 480px){
+  #top{
+    #top-inside{
+      .tofull{
+        padding-top: 20px!important;
+      }
+    }
+  }
+
+  .page-node-51{
+    h1.page-title{
+    line-height: 32px!important;
+    font-size: 1.6em!important;
+    }
+  }
+
+  .view-proximas-actividades{
+    .view-content{
+      .views-slideshow-cycle-processed{
+        .views_slideshow_cycle_main{
+          .views-slideshow-cycle-main-frame{
+            .views_slideshow_slide{
+              .views-slideshow-cycle-main-frame-row-item{
+                width: 100%!important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .page-talleres-vacaciones,
+  .page-musica,
+  .page-musica,
+  .page-programas-de-desarrollo,
+  .page-artes-visuales,
+  .page-cine,
+  .page-danza,
+  .page-teatro,
+  .page-regionales-cultura {
+    h1.page-title{
+    min-height: 57px!important;
+    line-height: 33px!important;
+    font-size: 1.3em!important;
+  }
+  .wrapHeader{
+      @include justify-content(center!important);
+      .wrapMostrarMenu{
+        margin-right: 50px!important;
+      }
+    }
+  }
+  .view-eventos-navidad{
+    .views-row{
+      width: 100%!important;
+    }
+  }
+
+  #block-block-10{
+    h1{font-size: 26px!important}
+    h3{font-size: 18px!important}
+  }
+}
+
 @media only screen and (max-width: 320px){
 
 }

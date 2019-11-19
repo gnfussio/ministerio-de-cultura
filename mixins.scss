@@ -1,13 +1,35 @@
 
+@import "compass/css3";
+
 $blanco : #FFF;
 $negro : #000;
-
+$grisClaro: #f2f2f2;
+$grisClaro2: #ababab;
+$grisClaro3: #dcdcdc;
+$rojo: #c1071c;
+$grisOscuro: #222222;
+$grisOscuro2: #3d3d3d;
+$azul: #009ac0;
+$grisTxt: #979797;
+$naranja: #fcb13a;
+$cafe: #c58f63;
+$celeste: #009ac0;
+$verde: #a1cd44;
+// tipo
+$tipo: 'Montserrat', sans-serif;
 
 @mixin transicion($val){
 	-webkit-transition: $val;
 	-moz-transition: $val;
 	-o-transition: $val;
 	transition: $val;
+}
+
+@mixin background($val){
+	 -webkit-background-size: $val;
+	 -moz-background-size: $val;
+	 -o-background-size: $val;
+	 background-size: $val;
 }
 
 // requiere compass/css3
@@ -29,7 +51,33 @@ $negro : #000;
 	@include justify-content(center);
 }
 
-@mixin wyh {
+@mixin wyh{
 	width: 100%;
 	height: auto;
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
 }

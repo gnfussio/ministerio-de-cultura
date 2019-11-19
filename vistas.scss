@@ -1,0 +1,521 @@
+@import "compass/reset";
+@import "mixins.scss";
+
+// Proximas actividades
+
+.view{
+  font-family: $tipo;
+}
+#page{
+  margin-top: 30px;
+}
+
+.block-views {
+  h2{
+    display: none;
+  }
+}
+
+#block-views-proximas-actividades-block{
+  padding: 30px 0;
+  h2{
+    display: block;
+    text-transform: uppercase;
+    font-family: $tipo;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: bold;
+    font-size: 2em;
+  }
+}
+
+// actividades
+
+.view-proximas-actividades{
+  .view-content{
+    .views-slideshow-cycle-processed{
+      .views_slideshow_cycle_main{
+        .views-slideshow-cycle-main-frame{
+          .views_slideshow_slide{
+            @include flexo2;
+            @include flex-wrap(wrap);
+            @include align-items(stretch);
+            .views-slideshow-cycle-main-frame-row-item{
+              width: 20%;
+              text-align: center;
+              padding-bottom: 30px;
+              border-bottom: solid 2px $grisClaro;
+              margin: 0 8px;
+              @include transicion(300ms);
+              .views-field-field-nombre-actividad{
+                height: 70px;
+                margin-top: 20px;
+                p{
+                  font-size: 0.9em;
+                  line-height: 18px;
+                }
+              }
+              .views-field-field-fecha{
+                p{
+                  font-size: 0.7em;
+                  color: $grisTxt;
+                }
+              }
+              .views-field-field-imagen{
+                a{
+                  img{
+                      &:hover{
+                        opacity: 0.7;
+                      }
+                  }
+                }
+              }
+              /// hover ROW slider
+              &:hover{
+                border-bottom: solid 2px $azul;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// destacados
+
+.view-destacados-x-categoria{
+  margin: 30px 0;
+  .view-content{
+    @include flexo2;
+    @include flex-wrap(wrap);
+    @include align-items(stretch);
+    .views-row{
+      width: 21%;
+      min-width: 240px;
+      text-align: center;
+      border: solid 1px $grisClaro;
+      position: relative;
+      text-transform: uppercase;
+      padding: 18px 8px;
+      overflow: hidden;
+      cursor: pointer;
+      .views-field-field-categoria{
+        height: 33px;
+        span{
+          padding: 14px 0;
+          font-size: 0.8em;
+        }
+      }
+      .views-field-title{
+        height: 33px;
+        span{
+          color: $grisTxt;
+          font-size: 0.8em;
+        }
+      }
+      .views-field-field-imagen{
+        .field-content{
+          overflow: hidden;
+          width: 185px;
+          margin: 0 auto;
+          img{
+            @include wyh;
+          }
+        }
+      }
+      .views-field-field-ugar{
+        div{
+          color: $cafe;
+          padding: 12px;
+        }
+      }
+      .views-field-view-node{
+        position: absolute;
+        width: 100%;
+        bottom: -30px;
+        @include transicion(300ms);
+          a{
+            background: $naranja;
+            color: white;
+            padding: 8px 12px;
+            font-size: 0.9em;
+          }
+      }
+      /////////////
+      // hover row
+      &:hover{
+        .views-field-view-node{
+          bottom: 50%;
+        }
+
+        .views-field-field-imagen{
+          .field-content{
+            img{
+              opacity: 0.5;
+            }
+          }
+        }
+        .views-field-field-categoria{
+          div{
+            color: $naranja;
+          }
+        }
+        .views-field-field-ugar{
+          div{
+            color: $naranja;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+// Titulares
+.page-talleres-vacaciones,
+.page-musica,
+.page-programas-de-desarrollo,
+.page-artes-visuales,
+.page-cine,
+.page-danza,
+.page-teatro,
+.page-regionales-cultura,
+.page-bibliotecas {
+  h1.page-title{
+    background:$rojo;
+    padding: 12px 20px;
+    font-family: $tipo;
+    font-size: 2em;
+    display: inline-block;
+    color: $blanco;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 50px;
+    &:after{
+      position: absolute;
+      right: -20px;
+      top: 0px;
+      width: 0;
+      height: 0;
+      border-top: 30px solid transparent;
+      border-bottom: 26px solid transparent;
+      content: "";
+      border-left: 20px solid $rojo;
+    }
+  }
+}
+.page-talleres-vacaciones{
+  h1.page-title{
+    &:before{
+      background: url('/sites/default/files/images/icons/vacaciones.png');
+      background-size: 38px;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      content: "";
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+.page-artes-visuales{
+  h1.page-title{
+    &:before{
+      background: url('/sites/default/files/images/icons/artevisual.png');
+      background-size: 38px;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      content: "";
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+.page-cine{
+  h1.page-title{
+    &:before{
+      background: url('/sites/default/files/images/icons/cine.png');
+      background-size: 38px;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      content: "";
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+.page-musica{
+  h1.page-title{
+    &:before{
+      background: url('/sites/default/files/images/icons/musica.png');
+      background-size: 38px;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      content: "";
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+.page-danza{
+  h1.page-title{
+    &:before{
+      background: url('/sites/default/files/images/icons/danza.png');
+      background-size: 38px;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      content: "";
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+.page-teatro{
+  h1.page-title{
+    &:before{
+      background: url('/sites/default/files/images/icons/teatro.png');
+      background-size: 38px;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      content: "";
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+.page-programas-de-desarrollo{
+  h1.page-title{
+    &:before{
+      background: url('/sites/default/files/images/icons/desarrollo.png');
+      background-size: 38px;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      content: "";
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+.page-regionales-cultura{
+  h1.page-title{
+    &:before{
+      background: url('/sites/default/files/images/icons/regionales.png');
+      background-size: 38px;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      content: "";
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.page-bibliotecas{
+  h1.page-title{
+    &:before{
+      background: url('/sites/default/files/images/icons/bibliotecas.png');
+      background-size: 38px;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      content: "";
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+
+
+.item-list{
+  margin-top: 30px;
+}
+
+// Vistas Eventos
+
+.wrapVistaEventos{
+  .view-content{
+    @include flexo2;
+    @include flex-wrap(wrap);
+    @include align-items(stretch);
+    .views-row{
+      width: 22%;
+      min-width: 232px;
+      position: relative;
+      padding: 20px 12px;
+      border: solid 1px $grisClaro;
+      text-align: center;
+      overflow: hidden;
+      .views-field-title{
+        height: 52px;
+        span{
+            color: $grisTxt;
+            text-transform: uppercase;
+            font-size: 0.8em;
+        }
+      }
+      .views-field-field-imagen{
+        img{
+          @include wyh;
+        }
+      }
+      .views-field.views-field-field-descripcion-actividad {
+          display: none;
+      }
+      .views-field-field-nombre-actividad{
+        height: 80px;
+        margin-top: 20px;
+          p{
+            text-transform: uppercase;
+            color: $rojo;
+            font-size: 0.8em;
+            line-height: 17px;
+          }
+      }
+      .views-field-field-fecha{
+        p{
+          font-size: 0.7em;
+          color: $grisTxt;
+        }
+      }
+      .views-field-view-node{
+        position: absolute;
+        width: calc(100% - 25px);
+        bottom: -30px;
+        text-transform: uppercase;
+        @include transicion(300ms);
+          a{
+            background: $rojo;
+            text-decoration: none;
+            color: white;
+            padding: 8px 12px;
+            font-size: 0.9em;
+          }
+      }
+      /// hover
+      &:hover{
+        .views-field-view-node{
+          bottom: 50%;
+        }
+        .views-field-field-imagen{
+          img{
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Vista de eventos relacionados
+
+#block-views-eventos-relacionados-block{
+  h2{
+    display: block!important;
+    padding: 60px 0;
+    margin-left: 5%;
+    text-transform: uppercase;
+    font-size: 1.3em;
+  }
+}
+
+
+// Vista de eventos Navidad
+
+.view-eventos-navidad{
+  .view-content{
+    @include flexo2;
+    @include flex-wrap(wrap);
+  }
+  .views-row{
+    width: 28%;
+    padding: 0 12px;
+    .views-field-field-foto-principal{
+      img{
+        @include wyh;
+        @include transicion(300ms);
+        &:hover{
+          opacity: 0.8;
+        }
+      }
+    }
+    .views-field-field-fecha-navidad{
+      text-align: center;
+      padding: 20px 0 30px 0;
+      p{
+        font-size: 1.5em;
+        strong{
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .views-row-odd{
+    p{
+      color: red;
+      border-bottom: solid 2px red;
+      padding-bottom: 30px;
+    }
+  }
+  .views-row-even{
+    p{
+      color: green;
+      border-bottom: solid 2px green;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+/**************************
+// Taxonomias eventos 2019
+/***************************/
+
+
+.view-taxonomy-term{
+  .view-header{
+    margin-bottom: 20px;
+  }
+  .views-row{
+    margin-bottom: 14px;
+    padding: 6px 0 14px 0;
+    border-bottom: dotted 1px $grisOscuro2;
+    .views-field{
+      margin-bottom: 7px;
+    }
+    .views-field-title{
+      h3{
+        a{
+          color: $negro;
+          font-weight: bold;
+          @include transicion(300ms);
+          &:hover{
+            color: $azul;
+          }
+        }
+      }
+    }
+    .views-field-field-fecha-2019{
+      .field-content{
+        color: $verde;
+        font-weight: 700;
+      }
+    }
+  }
+}
