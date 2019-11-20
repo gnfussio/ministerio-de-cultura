@@ -282,6 +282,13 @@ section.slider{
 }
 
 // menu lateral
+
+#block-block-6{
+  display: none;
+  position:absolute;
+  left: 0;
+}
+
 .front .menuLateral{
   li.nofront{
     display: none;
@@ -298,18 +305,32 @@ section.slider{
   z-index: 5;
   width: 275px;
   top:0;
-  left:-275px;
+  left:-290px;
   padding: 18px;
   background: $grisOscuro;
   font-family: $tipo;
   ul.menu{
     li{
       border-bottom: solid 1px $grisOscuro2;
+      display: block;
       //@include transicion(300ms);
+      img{
+        width: 18px;
+        height: auto;
+        display: inline-block;
+        margin-right: 6px
+      }
+      strong{
+        font-weight: bold;
+        display: block;
+        padding: 5px 0;
+        text-transform: uppercase;
+        color: $blanco;
+      }
       a{
         color: $blanco;
         padding: 8px 5px;
-        display: block;
+        display: inline-block;
         a:hover{
           color: $blanco;
         }
@@ -839,7 +860,7 @@ section.wrapContactenos {
     @include justify-content(space-around);
     figure{
       text-align: center;
-      min-width: 160px;
+      min-width: 130px;
       a{
         display: block;
       }
@@ -897,7 +918,9 @@ section.wrapContactenos {
   }
 }
 
-
+.tofull .region #block-search-form .form-actions{
+ right:40px!important;
+}
 
 // fondo pastoras para navidad 2018
 /*
